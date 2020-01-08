@@ -1,0 +1,98 @@
+------------------- User Rest API'S details -----------------------------
+Add Collector - http://localhost:5000/api/v1/freezer
+
+Method : POST
+
+Sample Request Json : 
+{
+    "foodName": "Egg",
+    "foodType": "Breakfast",
+    "quantity": "5",
+    "dateAdded": "01/01/2020"
+   
+}
+
+Sample Response Json :
+{
+    "id": 1,
+    "foodName": "Egg",
+    "foodType": "Breakfast",
+    "quantity": 5,
+    "dateAdded": "01/01/2020"
+}
+
+--------------------------------------------------------------------------
+Update Collector - http://localhost:5000/api/v1/freezer/1
+
+Method : GET
+
+Sample Response Json :
+
+{
+    "id": 1,
+    "foodName": "Egg",
+    "foodType": "Breakfast",
+    "quantity": 5,
+    "dateAdded": "01/01/2020"
+}
+
+--------------------------------------------------------------------------
+Update Collector - http://localhost:5000/api/v1/freezer/1
+
+Method : PUT
+
+Sample Request Json : 
+{
+    "foodName": "Egg",
+    "foodType": "Dinner",
+    "quantity": "5",
+    "dateAdded": "01/01/2020"
+   
+}
+
+Sample Response Json :
+
+{
+    "id": 1,
+    "foodName": "Egg",
+    "foodType": "Dinner",
+    "quantity": 5,
+    "dateAdded": "01/01/2020"
+}
+
+--------------------------------------------------------------------------
+Update Collector - http://localhost:5000/api/v1/freezer?search=foodName:Egg
+
+Method : GET
+
+Sample Response Json :
+
+[
+    {
+        "id": 1,
+        "foodName": "Egg",
+        "foodType": "Breakfast",
+        "quantity": 5,
+        "dateAdded": "01/01/2020"
+    }
+]
+
+--------------------------------------------------------------------------
+Update Collector - http://localhost:5000/api/v1/freezer?search=foodType:Breakfast
+
+Method : GET
+
+Sample Response Json :
+
+[
+    {
+        "id": 1,
+        "foodName": "Egg",
+        "foodType": "Breakfast",
+        "quantity": 5,
+        "dateAdded": "01/01/2020"
+    }
+]
+
+
+
